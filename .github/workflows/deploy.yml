@@ -1,0 +1,51 @@
+name: Deploy ghephang247-landing to Servers
+
+on:
+  push:
+    branches:
+      - main
+
+# Tránh chồng lấn job khi push liên tiếp
+concurrency:
+  group: deploy-landing-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  deploy-prod:
+    name: Deploy MAIN (Server Ubuntu - SSH user/password)
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      - name: Deploy to PROD via SSH password
+        env:
+          PROD_HOST: 157.66.100.68            # server PROD (ví dụ giống BE)
+          PROD_USER: root                     # đổi thành user thật (ubuntu/root/…)
+          PROD_PASS: ${{ secrets.PROD_SSH_PASSWORD }}
+        run: |
+          sshpass -p "$PROD_PASS" ssh -o StrictHostKeyChecking=no "$PROD_USER@$PROD_HOST" << 'EOF'
+            set -e
+            cd ~/ghephang247-landing
+
+            echo "==> Clear Docker rác, images, containers, volumes"
+            sudo docker compose down --remove-orphans || true
+            sudo docker system prune -af || true
+            sudo docker volume prune -f || true
+            sudo docker builder prune -af || true
+
+            echo "==> Pull code nhánh main"
+            git fetch origin main
+            git checkout -f main || git checkout -b main
+            git reset --hard origin/main
+
+            echo "==> Up services"
+            sudo docker compose up -d --build
+          EOF
