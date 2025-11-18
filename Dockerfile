@@ -20,9 +20,9 @@
     ENV NODE_ENV=production
     
     # Đặt port Next.js listen là 3001 (khớp với bạn config)
-    ENV PORT=3001
+    ENV PORT=3002
     
-    EXPOSE 3001
+    EXPOSE 3002
     
     CMD ["npm", "start"]
     
