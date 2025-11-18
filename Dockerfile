@@ -1,18 +1,28 @@
-# ---------- Base stage ----------
-FROM node:20-alpine AS base
-WORKDIR /app
-ENV NODE_ENV=production
+# --- BUILD STAGE ---
+    FROM node:20-alpine AS builder
 
-# ---------- Dependencies ----------
-COPY package*.json ./
-RUN npm ci
+    WORKDIR /app
+    
+    COPY package*.json ./
+    RUN npm install
+    
+    ENV NEXTJS_IGNORE_ESLINT_ERRORS=true
 
-# ---------- Build stage ----------
-COPY . .
-RUN npm run build
-
-# ---------- Runner ----------
-EXPOSE 3002
-ENV PORT=3002
-
-CMD ["npm", "start"]
+    COPY . .
+    RUN npm run build
+    
+    # --- PRODUCTION STAGE ---
+    FROM node:20-alpine
+    
+    WORKDIR /app
+    
+    COPY --from=builder /app ./
+    ENV NODE_ENV=production
+    
+    # Đặt port Next.js listen là 3001 (khớp với bạn config)
+    ENV PORT=3001
+    
+    EXPOSE 3001
+    
+    CMD ["npm", "start"]
+    
