@@ -37,7 +37,7 @@ export default function AppsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="apps" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto text-center px-6">
         <h2 className="text-3xl font-bold mb-12">Vì sao chọn GhepHang247?</h2>
 
