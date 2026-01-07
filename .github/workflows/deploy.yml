@@ -47,5 +47,12 @@ jobs:
             git reset --hard origin/main
 
             echo "==> Up services"
+
+            # Random project name mỗi lần deploy
+            RAND="$(openssl rand -hex 4)"
+            export COMPOSE_PROJECT_NAME="landing_${RAND}"
+
+            echo "==> Deploy with COMPOSE_PROJECT_NAME=$COMPOSE_PROJECT_NAME"
+
             sudo docker compose up -d --build
           EOF

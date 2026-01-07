@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ghephang247-landing
     ports:
       - "3002:3002"
     environment:
