@@ -20,7 +20,7 @@ export default function Hero() {
 
             <div className="flex space-x-5 mt-8">
               <a
-                href="https://play.google.com/store/apps/details?id=com.ghephang247khach"
+                href="https://play.google.com/store/apps/details?id=com.anonymous.GhepHang247Khach&pcampaignid=web_share"
                 target="_blank"
               >
                 <img
@@ -29,7 +29,10 @@ export default function Hero() {
                   className="h-14 hover:scale-105 transition-transform"
                 />
               </a>
-              <a href="#" target="_blank">
+              <a 
+                href="https://apps.apple.com/vn/app/gh%C3%A9p-h%C3%A0ng-24-7/id6747367108" 
+                target="_blank"
+              >
                 <img
                   src="/appstore.svg"
                   alt="App Store"
@@ -51,7 +54,7 @@ export default function Hero() {
 
             <div className="flex space-x-5 mt-8">
               <a
-                href="https://play.google.com/store/apps/details?id=com.ghephang247driver"
+                href="https://play.google.com/store/apps/details?id=com.anonymous.GhepHang247TaiXe&pcampaignid=web_share"
                 target="_blank"
               >
                 <img
@@ -60,7 +63,10 @@ export default function Hero() {
                   className="h-14 hover:scale-105 transition-transform"
                 />
               </a>
-              <a href="#" target="_blank">
+              <a 
+                href="https://apps.apple.com/vn/app/gh%C3%A9p-h%C3%A0ng-24-7-t%C3%A0i-x%E1%BA%BF/id6747101145" 
+                target="_blank"
+              >
                 <img
                   src="/appstore.svg"
                   alt="App Store"
