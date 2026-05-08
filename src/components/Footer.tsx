@@ -5,13 +5,48 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300 py-10">
-      <div className="max-w-6xl mx-auto px-6 md:px-0 text-center space-y-2">
-        <h4 className="text-lg font-semibold text-white">
-          CÔNG TY TNHH GIẢI PHÁP CÔNG NGHỆ HOÀNG ÂN
+      <div className="max-w-6xl mx-auto px-6 md:px-0 text-center space-y-3">
+        <h4 className="text-lg font-semibold text-white uppercase">
+          Công ty TNHH Giải pháp Công nghệ Hoàng Ân
         </h4>
-        <p>Địa chỉ: 294 Nguyễn Phước Lan, Hòa Xuân, Đà Nẵng</p>
-        <p>Hotline: 19005361</p>
-        <p>Email: contact@gpcnhoangan.com</p>
+
+        <div className="space-y-2 text-sm md:text-base leading-relaxed">
+          <p>
+            <span className="font-semibold text-white">Người đại diện:</span>{" "}
+            Trần Hữu Hoàng
+          </p>
+
+          <p>
+            <span className="font-semibold text-white">Địa chỉ:</span>{" "}
+            294 Nguyễn Phước Lan, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam
+          </p>
+
+          <p>
+            <span className="font-semibold text-white">Email:</span>{" "}
+            <a
+              href="mailto:contact@gpcnhoangan.com"
+              className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition"
+            >
+              contact@gpcnhoangan.com
+            </a>
+          </p>
+
+          <p>
+            <span className="font-semibold text-white">Điện thoại:</span>{" "}
+            <a
+              href="tel:19005361"
+              className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition"
+            >
+              19005361
+            </a>
+          </p>
+
+          <p>
+            <span className="font-semibold text-white">GPKD số:</span>{" "}
+            0402259323, cấp ngày 06/01/2025, nơi cấp: Sở Kế hoạch và Đầu tư
+            Thành phố Đà Nẵng
+          </p>
+        </div>
 
         {/* Link pháp lý */}
         <div className="pt-4 mt-4 border-t border-gray-800">
