@@ -55,7 +55,7 @@ export default function Footer() {
               href="https://ghephang247.com/legal/terms/"
               className="hover:text-white transition"
             >
-              Điều khoản hoạt động
+              Quy chế hoạt động
             </Link>
 
             <Link
