@@ -71,6 +71,12 @@ export default function Footer() {
             >
               Chính sách quản lý khiếu nại
             </Link>
+            <Link
+              href="https://ghephang247.com/admin/phan-anh-to-chuc-bvntd"
+              className="hover:text-white transition"
+            >
+              Phản ánh của tổ chức bảo vệ người tiêu dùng
+            </Link>
           </div>
         </div>
 
