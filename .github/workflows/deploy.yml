@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy to PROD via SSH password
         env:
-          PROD_HOST: 157.66.100.68            # server PROD (ví dụ giống BE)
+          PROD_HOST: 180.93.42.219            # server PROD (ví dụ giống BE)
           PROD_USER: root                     # đổi thành user thật (ubuntu/root/…)
           PROD_PASS: ${{ secrets.PROD_SSH_PASSWORD }}
         run: |
