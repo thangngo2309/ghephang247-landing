@@ -63,7 +63,7 @@ export default function AppsSection() {
         {/* HEADING */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#F4B414]">
-            GhepHang247
+            Ghép Hàng 24/7
           </div>
 
           <h2
@@ -76,7 +76,7 @@ export default function AppsSection() {
               lg:text-5xl
             "
           >
-            Vì sao chọn GhepHang247?
+            Vì sao chọn Ghép Hàng 24/7?
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-blue-100/70 sm:text-lg">

@@ -110,7 +110,7 @@ export default function Hero() {
               sm:text-lg
             "
           >
-            GhepHang247 kết nối nhu cầu gửi hàng với tài xế phù hợp, giúp khách
+            Ghép Hàng 24/7 kết nối nhu cầu gửi hàng với tài xế phù hợp, giúp khách
             hàng thuận tiện hơn trong vận chuyển và hỗ trợ tài xế tối ưu hành
             trình.
           </p>

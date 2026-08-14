@@ -44,8 +44,8 @@ export default function Header() {
 
           <div className="leading-none">
             <div className="text-[20px] font-extrabold tracking-[-0.02em] text-[#1E326E]">
-              GhepHang
-              <span className="text-[#E77A1F]">247</span>
+              Ghép Hàng 
+              <span className="text-[#E77A1F]">{' '}24/7</span>
             </div>
 
             <div className="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-400">

@@ -33,8 +33,8 @@ export default function Footer() {
 
               <div>
                 <div className="text-xl font-extrabold">
-                  GhepHang
-                  <span className="text-[#F4B414]">247</span>
+                  Ghép Hàng
+                  <span className="text-[#F4B414]">{' '}24/7</span>
                 </div>
 
                 <div className="mt-1 text-xs text-slate-400">

@@ -1,15 +1,30 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ReactNode } from "react";
 
-export const metadata = {
-  title: "GhepHang247 - Ứng dụng giao hàng ghép tiện lợi",
-  description: "Giải pháp giao hàng ghép nhanh chóng, tiết kiệm cho khách hàng và tài xế.",
+const inter = Inter({
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "GhepHang247 - Kết nối vận chuyển",
+    template: "%s | GhepHang247",
+  },
+  description:
+    "Ghép Hàng 24/7 - Nền tảng kết nối nhu cầu vận chuyển hàng hóa với tài xế phù hợp.",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="vi">
-      <body className="bg-white text-gray-800">
+      <body className={inter.variable}>
         {children}
       </body>
     </html>
